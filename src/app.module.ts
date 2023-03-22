@@ -5,8 +5,10 @@ import mongoose from 'mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
+import { SeedsModule } from './shared/seeds.module';
 import { UserModule } from './user/user.module';
 import configuration from './utils/config/configuration';
+
 mongoose.set('debug', true);
 
 @Module({
@@ -24,6 +26,7 @@ mongoose.set('debug', true);
     }),
     UserModule,
     AuthModule,
+    SeedsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

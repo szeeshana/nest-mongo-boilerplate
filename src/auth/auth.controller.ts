@@ -16,7 +16,9 @@ import { Request } from 'express';
 import { UserService } from './../user/user.service';
 import { RegisterUserDto } from './dto/register.user.dto';
 import { ERROR_MESSAGES } from 'src/utils/constants/generic.constants';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Auth')
 @Controller('auth')
 export class AuthController {
   constructor(

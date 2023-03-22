@@ -18,7 +18,8 @@ import { CommonChecksDTO } from 'src/utils/common/dto/common.dto';
 import { AuthGuard } from '@nestjs/passport';
 import { RoleGuard } from 'src/utils/guards/role.guard';
 import { UserType } from './enum/user.enum';
-
+import { ApiTags } from '@nestjs/swagger';
+@ApiTags('User')
 @Controller('user')
 export class UserController {
   constructor(private readonly userService: UserService) {}
